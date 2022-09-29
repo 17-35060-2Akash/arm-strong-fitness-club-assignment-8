@@ -30,7 +30,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <h4 className='text-start py-4 pb-5'>Pick Today's Workout:</h4>
+                <h4 className='text-start py-4 pb-5' id='workout-section-starter'>Pick Today's Workout:</h4>
 
                 <div className='workout-section container  row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'>
                     {

@@ -6,7 +6,7 @@ import QuestionAnswers from './components/QuestionAnswers/QuestionAnswers';
 function App() {
   return (
     <div className="App">
-      {/* <Header></Header> */}
+      <Header></Header>
       <Home></Home>
       <QuestionAnswers></QuestionAnswers>
     </div>

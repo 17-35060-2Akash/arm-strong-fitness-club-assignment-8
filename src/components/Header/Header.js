@@ -30,15 +30,15 @@ const Header = () => {
                         </li>
                         <li className="nav-item me-5">
                             <a id="blog-btn" className="nav-link fw-semibold fs-5 line-underlined text-white"
-                                href="#discover-our-course-title">Workouts</a>
+                                href="#workout-section-starter">Workouts</a>
                         </li>
                         <li className="nav-item me-5">
                             <a id="blog-btn" className="nav-link fw-semibold fs-5 line-underlined text-white text-nowrap"
-                                href="#discover-our-course-title">Fitness Kits</a>
+                                href="#details-panel">Fitness Panel</a>
                         </li>
                         <li className="nav-item me-5">
                             <a id="blog-btn" className="nav-link fw-semibold fs-5 line-underlined text-white"
-                                href="#discover-our-course-title">Q/A</a>
+                                href="#q-a-section">Q/A</a>
                         </li>
                     </ul>
                 </div>

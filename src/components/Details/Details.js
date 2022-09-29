@@ -20,7 +20,7 @@ const Details = ({ time }) => {
     }
 
     return (
-        <div className='d-flex flex-column px-4 details-section container'>
+        <div className='d-flex flex-column px-4 details-section container pt-4' id='details-panel'>
             <div className='d-flex align-items-center profile-section'>
                 <div className='pe-2'>
                     <img src={profile} alt="" className='rounded' />
