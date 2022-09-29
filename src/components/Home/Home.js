@@ -3,6 +3,7 @@ import './Home.css';
 import logo from '../../images/logo3.png'
 import Workout from '../Workout/Workout';
 import Details from '../Details/Details';
+import QuestionAnswers from '../QuestionAnswers/QuestionAnswers';
 
 const Home = () => {
     const [workouts, setWorkouts] = useState([]);
@@ -14,22 +15,24 @@ const Home = () => {
 
     return (
         <div className='home-container'>
-            <div className='activities-container py-5'>
-                <div className='container ms-3'>
+            <div className='activities-container py-5 d-flex flex-column align-items-center'>
+                <div className=''>
                     <div className='d-flex align-items-center'>
                         <img src={logo} alt="" className='title-img me-3' />
-                        <h3 className='fw-bolder'><span className='fs-1' style={{ color: '#1b45f0' }}>ARM-Strong </span><span style={{ color: '#b105bc' }}>Fitness Club</span></h3>
+                        <h3 className='fw-bolder page-title'><span className='fs-1' style={{ color: '#1b45f0' }}>ARM-Strong </span><span style={{ color: '#b105bc' }}>Fitness Club</span></h3>
                     </div>
-                    <h4 className='text-start py-4'>Pick Today's Workout:</h4>
-                </div>
 
-                <div className='workout-section container'>
+                </div>
+                <h4 className='text-start py-4 pb-5'>Pick Today's Workout:</h4>
+
+                <div className='workout-section container  row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'>
                     {
                         workouts.map(workout => <Workout
                             workout={workout}
                             key={workout.id}></Workout>)
                     }
                 </div>
+                {/* <QuestionAnswers></QuestionAnswers> */}
             </div>
 
 

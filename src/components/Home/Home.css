@@ -11,31 +11,50 @@
 
 .details-menu {
     background-color: white;
+
 }
 
-.workout-section {
+/* .workout-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
+} */
 
 @media screen and (max-width:576px) {
+    .title-img {
+        width: 80px;
+    }
+
+    .page-title {
+        font-size: 70%;
+    }
+
     .home-container {
         display: flex;
         flex-direction: column;
-
-
     }
 
-    .workout-section {
+    /*  .workout-section {
         grid-template-columns: repeat(1, 1fr);
 
-    }
+    } */
+
+
 }
 
 @media screen and (min-width:577px) and (max-width:1100px) {
 
-    .workout-section {
+    /* .workout-section {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .home-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+    .details-menu {
+        width: 400px;
+    } */
 }
