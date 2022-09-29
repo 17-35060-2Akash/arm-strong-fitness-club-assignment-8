@@ -29,10 +29,9 @@
         height: 200px;
     }
 }
-
+ */
 @media screen and (min-width:577px) and (max-width:1100px) {
-    .workout img {
-        width: 280px;
-        height: 210px;
+    .btn-add-to-list {
+        font-size: smaller;
     }
-} */
+}

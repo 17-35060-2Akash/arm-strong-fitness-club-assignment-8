@@ -57,13 +57,13 @@ const Details = ({ time }) => {
             </div>
 
             <div className='d-flex align-items-center justify-content-between px-4 rounded-3 py-4' style={{ backgroundColor: '#e0dddd9b' }}>
-                <h5 className=''>Workout Time</h5>
-                <h5 className='text-muted'><span >{time.toFixed(2)}</span> minutes</h5>
+                <h5 className='text-nowrap workout-show-time'>Workout Time</h5>
+                <h5 className='text-muted workout-show-time'><span >{time.toFixed(2)}</span> minutes</h5>
             </div>
 
             <div className='d-flex align-items-center justify-content-between px-4 rounded-3 py-4 my-4 mb-5' style={{ backgroundColor: '#e0dddd9b' }}>
-                <h5 className=''>Break Time</h5>
-                <h5 className='text-muted'><span id='workout-time'>{brkTime}</span> minutes</h5>
+                <h5 className='text-nowrap workout-show-time'>Break Time</h5>
+                <h5 className='text-muted workout-show-time'><span id='workout-time'>{brkTime}</span> minutes</h5>
             </div>
             <button className='btn btn-success py-4 fs-4 mt-5'>Workout Completed</button>
 

@@ -14,6 +14,10 @@
 
 }
 
+.logo-title-section {
+    padding: 0 20px;
+}
+
 /* .workout-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,15 +50,24 @@
 
     /* .workout-section {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 
-    .home-container {
+    /* .home-container {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 3fr 1fr;
 
+    } */
+
+    .title-img {
+        width: 70px;
     }
+
+    .page-title {
+        font-size: 100%;
+    }
+
 
     .details-menu {
-        width: 400px;
-    } */
+        width: 360px;
+    }
 }
