@@ -25,7 +25,7 @@ const Home = () => {
             <div className='activities-container py-5 d-flex flex-column align-items-center'>
                 <div className='logo-title-section'>
                     <div className='d-flex align-items-center'>
-                        <img src={logo} alt="" className='title-img me-3' />
+                        <img src={logo} alt="" className='title-img ' />
                         <h3 className='fw-bolder page-title'><span className='fs-1' style={{ color: '#1b45f0' }}>ARM-Strong </span><span style={{ color: '#b105bc' }}>Fitness Club</span></h3>
                     </div>
 

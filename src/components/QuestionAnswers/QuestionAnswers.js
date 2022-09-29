@@ -37,8 +37,8 @@ const QuestionAnswers = () => {
                                         react can figure out where to change and at last updates the Actual DOM.
                                     </span>
                                     <br /><br /><br />
-                                    <img src={img} alt="" style={{ width: '600px' }} />
-                                    <br /><br />
+                                    {/* <img src={img} alt="" className='img-fuild' id='virtual-image' style={{ width: '600px' }} /> */}
+                                    <br />
 
                                 </div>
                             </div>
