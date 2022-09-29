@@ -4,6 +4,9 @@ import profile from '../../images/profile.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { addToDB, getTimeList } from '../utilities/fakeDB';
+import Swal from "sweetalert2";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Details = ({ time }) => {
@@ -18,6 +21,11 @@ const Details = ({ time }) => {
         setBrkTime(time);
         addToDB(time);
     }
+
+    const invokeToast = () => {
+        // Swal.fire("Well Done mate!", "success");
+        toast.success("Well Done mate! You've completed today's workout.")
+    };
 
     return (
         <div className='d-flex flex-column px-4 details-section container pt-4' id='details-panel'>
@@ -65,8 +73,16 @@ const Details = ({ time }) => {
                 <h5 className='text-nowrap workout-show-time'>Break Time</h5>
                 <h5 className='text-muted workout-show-time'><span id='workout-time'>{brkTime}</span> minutes</h5>
             </div>
-            <button className='btn btn-success py-4 fs-4 mt-5'>Workout Completed</button>
-
+            <button onClick={invokeToast} className='btn btn-success py-4 fs-4 mt-5'>Workout Completed</button>
+            <ToastContainer position='top-center'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover></ToastContainer>
         </div>
     );
 };
