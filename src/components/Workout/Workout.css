@@ -1,14 +1,15 @@
 .workout {
-    background-color: white;
-    border-radius: 13px;
+    /*   background-color: white;
+    border-radius: 13px; */
 
 }
 
 .workout img {
-    /* width: 386px;
+    /* width: 286px;
     height: 300px; */
-    border-radius: 8px;
-    margin: 15px 15px;
+
+    /* border-radius: 8px; */
+    /* margin: 15px 15px; */
 }
 
 .btn-add-to-list {

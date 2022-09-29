@@ -19,7 +19,7 @@ const QuestionAnswers = () => {
                         <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show"
                             aria-labelledby="panelsStayOpen-headingOne">
                             <div className="accordion-body">
-                                <span className="text-primary display-5 fw-semibold">ReactJS </span>
+                                <span className="text-primary display-6 fw-semibold">ReactJS </span>
 
                                 <span className="fs-4">
                                     ,the evolutionary and infamous <span className='text-success fw-semibold'>JavaScrpt library</span> for building user interfaces which is
@@ -107,31 +107,30 @@ const QuestionAnswers = () => {
                             <button className="accordion-button collapsed " type="button" data-bs-toggle="collapse"
                                 data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                                 aria-controls="panelsStayOpen-collapseThree">
-                                3. What is javascript EventLoop?
+                                3. What are the usages of useEffect Hook other than to  load data ?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingThree">
                             <div
                                 className="accordion-body fs-4 d-flex justify-content-between align-items-center flex-column flex-md-row flex-lg-row">
-                                <div>
-                                    <strong>The event loop is a mechanism that allows JavaScript to perform non-blocking
-                                        operations consistantly. </strong> <br /><br />
-
-                                    <strong className="text-success">The event queue</strong> is responsible for sending new
-                                    functions to the
-                                    stack for
-                                    processing. It follows the queue data structure to maintain the correct sequence in
-                                    which all operations should be sent for execution. <br /><br />
+                                <div className='text-start'>
+                                    <br />
+                                    <strong className="text-success">The useEffect()</strong> is being used by us mostly to fetch data aka. loading
+                                    data whereever we're trying to load thoese data from outside our system. But the main objective of this Hook is that
+                                    allows you to perform side effects in your components.<br /><br />
                                     <img className="img-fluid" src="images/eventloop.png" alt="" />
-                                    There are <strong>three</strong> main structures that we need to understand in the
-                                    loop. The <strong className="text-info">Stack</strong> ,
-                                    the <strong className="text-info">Heap</strong> and the <strong
-                                        className="text-info">Callback Queue</strong>.
-                                    There are objects which are in the heap. The tasks of the stack is primarily
-                                    executed. The tasks which are asynchronous those are pushed in the queue and when
-                                    the stack gets free
-                                    it pulls a request from the queue. By this process the system does not slow down.
+
+                                    Although useEffect is deferred until after the browser has painted, it's guaranteed to fire before any new renders. React
+                                    will always flush a previous render's effects before starting a new update.
+                                    <span >There are basically two parts a useEffect hook, one is a function and the other is a dependency list.</span>
+                                    <br /><br />
+                                    <span className='text-primary'>
+                                        Except loading data this Hook is used for directly updating the dom and handling timers.
+                                        We can work the dynamic behaviour and make a better experience and make our pages more interactive.
+
+                                    </span>
+
                                 </div>
                                 <div>
                                     <img className="img-fluid w-50" src="images/csssbox.png" alt="" />
