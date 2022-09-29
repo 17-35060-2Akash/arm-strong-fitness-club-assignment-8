@@ -1,5 +1,6 @@
 import React from 'react';
 import './QuestionAnswers.css';
+import img from '../../images/Group-3-1.jpg';
 
 const QuestionAnswers = () => {
     return (
@@ -12,59 +13,30 @@ const QuestionAnswers = () => {
                             <button className="accordion-button " type="button" data-bs-toggle="collapse"
                                 data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                                 aria-controls="panelsStayOpen-collapseOne">
-                                1. What is the difference between Local and Session Storage ?
+                                1. How does React work ?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show"
                             aria-labelledby="panelsStayOpen-headingOne">
                             <div className="accordion-body">
-                                <span className="text-primary display-5 fw-semibold">Local Storage </span>
+                                <span className="text-primary display-5 fw-semibold">ReactJS </span>
 
                                 <span className="fs-4">
-                                    The main difference is that while data in <strong className="text-success">Local
-                                        Storage</strong> doesn't
-                                    expire, data in
-                                    <strong className="text-success">Session Storage</strong>
-                                    is cleared when the page session ends. Whenever a document is loaded in a particular
-                                    page or tab
-                                    in the browser, an unique page session gets created and assigned to that particular
-                                    page or tab.
-                                    But to get a clear understanding of the topic let's see the differences here.
+                                    ,the evolutionary and infamous <span className='text-success fw-semibold'>JavaScrpt library</span> for building user interfaces which is
+                                    fast, declaraive and flexible at the same time. Initially developped and maintaind by FB which is swift and
+                                    <span className='text-primary fw-semibold'> component based</span>.
+                                    React basically breaks web elements down into resuable components making it easy to manage
+                                    complex user interfaces with it's <span className='fs-3 text-success fw-semibold'>virtual DOM algorithm</span>.
+                                    <br /><br /><br />
+                                    Reacts virtual DOM is a JS representation of the actual DOM which is a lightweighted blue print of the actual one.
+                                    When react publishes a DOm it keeps a copy of that actual DOM which is called the virtual DOM. When updates are made react makes another
+                                    copy of the virtual DOM and runs <span className='fs-3 text-primary fw-semibold'>'diff algorithm'</span> between those two. Bt these
+                                    react can figure out where to change and at last updates the Actual DOM.
                                 </span>
                                 <br /><br /><br />
-                                {/* table starts */}
-                                <table className="table table-dark table-striped text-center">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Criteria</th>
-                                            <th scope="col">Local Storage</th>
-                                            <th scope="col">Session Storage</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row" className="text-info fw-semibold">Storage Type</th>
-                                            <td>Permanent</td>
-                                            <td>Temporary</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" className="text-info fw-semibold">Storage capacity</th>
-                                            <td>5-10 mb</td>
-                                            <td>5-10 mb</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" className="text-info fw-semibold">Auto Expiry</th>
-                                            <td>No</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" className="text-info fw-semibold">Data Persistance</th>
-                                            <td>Till manually deleted</td>
-                                            <td>Till browser Tab is closed</td>
-                                        </tr>
-                                    </tbody>
-                                </table><br />
-                                {/* table ends */}
+                                <img src={img} alt="" style={{ width: '600px' }} />
+                                <br /><br />
+
                             </div>
                         </div>
                     </div>
@@ -73,30 +45,60 @@ const QuestionAnswers = () => {
                             <button className="accordion-button collapsed " type="button" data-bs-toggle="collapse"
                                 data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                                 aria-controls="panelsStayOpen-collapseTwo">
-                                2. How is Global Scope different from Block Scope ?
+                                2.What are the differences between Props and State ?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingTwo">
                             <div className="accordion-body fs-4">
-                                <strong className="text-danger display-6 fw-semibold">Global scope and Block scope
+                                <strong className="text-info display-6 fw-semibold">Props vs State
                                 </strong><br /><br />
-                                <span className="fs-3 fw-semibold text-success">Global Scope:</span> In Javascript,the
-                                global scope is
-                                the context where everything in a Javascript program executes by default. The concept
-                                includes all variables, objects also references that are not contained within a
-                                pre-determined or customized scope. Global scope is the entire Javascript execution
-                                environment.
-                                <br /><br />
-                                <span className="fs-3 fw-semibold text-success">Block Scope:</span>This scope restricts the
-                                variable that is declared inside a specific block, from access
-                                by the outside of the block. The let and const keyword facilitates the variables to be
-                                block scoped. <br /><br />
-                                In JavaScript, a variable can also be used without declaring it. If a variable is used
-                                without declaring it, that variable automatically becomes a global variable. where there
-                                are function scopes, loop condition or if else scopes which are blocks and variables or
-                                functions declared inside block scopes can only operate inside the scope.
+                                <div className='text-start'>
+                                    <span className="fs-3 fw-semibold text-success">Props: </span> In React, Props are used to pass data from one component to another. The state is a local data storage that
+                                    is local to the component only and cannot be passed to other components.
+                                    <br /><br />
+                                </div>
+                                <div className='text-start'>
+                                    <span className="fs-3 fw-semibold text-success">State: </span>The State is a built-in react object that
+                                    is used to contain data or information about the component.
+                                    A component's state can change over time; whenever it changes, the component re-renders.
+                                    <br /><br />
+                                    <h4>Here are some differences between them below:</h4>
+                                </div>
 
+                                {/* table starts */}
+                                <table className="table table-dark table-striped text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Criteria</th>
+                                            <th scope="col">Props</th>
+                                            <th scope="col">State</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" className="text-info fw-semibold">Data <br /> Passage</th>
+                                            <td className='fs-5'>Data is passed from one component to another.</td>
+                                            <td className='fs-5'>Data is passed within the component only.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" className="text-info fw-semibold">Modification</th>
+                                            <td>Immutable</td>
+                                            <td>is Mutable</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" className="text-info fw-semibold">Usage</th>
+                                            <td>can be used with state and functional components.</td>
+                                            <td>only with the state components/class component in previous. </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" className="text-info fw-semibold">Access</th>
+                                            <td>Props are read-only.</td>
+                                            <td>State is both read and write.</td>
+                                        </tr>
+                                    </tbody>
+                                </table><br />
+                                {/* table ends */}
                             </div>
                         </div>
                     </div>
@@ -138,53 +140,6 @@ const QuestionAnswers = () => {
                         </div>
                     </div>
 
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="panelsStayOpen-headingFour">
-                            <button className="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseFour">
-                                4. How many ways are there to get 'undefined' in Javascript?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseFour" className="accordion-collapse collapse"
-                            aria-labelledby="panelsStayOpen-headingFour">
-                            <div className="accordion-body fs-4">
-                                <strong>There are <span className="fs-3 text-danger">8 ways</span> in which we can find
-                                    <span className="text-danger">"undefined"</span> in
-                                    javaScript.</strong><br /><br />
-                                <ol className="text-dark fw-normal">
-                                    <li>Variable declaration without assigning a value.<br />
-                                        Example:<br />
-                                        <code>
-                                            let a;
-                                            console.log(a);
-                                        </code>
-                                    </li>
-                                    <li>Calling a function with no return value.
-                                        <br />
-                                        Example:<br />
-                                        <code>
-
-                                            const addition=sum(5,6);
-                                        </code>
-                                    </li>
-                                    <li>Parameters that are not passed triggers undefined.</li>
-                                    <li>If return of a function has nothing to return.</li>
-                                    <li>If there is an Object but it's property which is called is missing from that
-                                        Object.</li>
-                                    <li>Calling an array element by an index which does not exist.</li>
-                                    <li>After creating an array when an element is deleted. <br />
-                                        Example:<br />
-                                        <code>
-                                            const array=[54,75,85,12]; <br />
-                                            delete array[1];
-                                        </code>
-                                    </li>
-                                    <li>Lastly setting a value directly to 'undefined'.</li><br />
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </div>

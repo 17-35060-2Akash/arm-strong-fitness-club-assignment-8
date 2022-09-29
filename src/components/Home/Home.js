@@ -13,6 +13,13 @@ const Home = () => {
             .then(data => setWorkouts(data))
     }, []);
 
+    const [time, setTime] = useState(0);
+
+    const handleAddToList = (workout) => {
+        const workoutTime = workout.time;
+        setTime(time + workoutTime);
+    }
+
     return (
         <div className='home-container'>
             <div className='activities-container py-5 d-flex flex-column align-items-center'>
@@ -29,7 +36,8 @@ const Home = () => {
                     {
                         workouts.map(workout => <Workout
                             workout={workout}
-                            key={workout.id}></Workout>)
+                            key={workout.id}
+                            handleAddToList={handleAddToList}></Workout>)
                     }
                 </div>
                 {/* <QuestionAnswers></QuestionAnswers> */}
@@ -37,7 +45,7 @@ const Home = () => {
 
 
             <div className='details-menu py-5'>
-                <Details></Details>
+                <Details time={time}></Details>
             </div>
         </div>
     );

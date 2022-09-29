@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Details.css';
 import profile from '../../images/profile.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { addToDB, getTimeList } from '../utilities/fakeDB';
 
 
-const Details = () => {
+const Details = ({ time }) => {
+    const [brkTime, setBrkTime] = useState(0);
+    useEffect(() => {
+        const storedTimeList = getTimeList();
+        setBrkTime(storedTimeList['break-time']);
+        // console.log(breakTime);
+    }, []);
+
+    const setBreakTime = (time) => {
+        setBrkTime(time);
+        addToDB(time);
+    }
+
     return (
         <div className='d-flex flex-column px-4 details-section container'>
             <div className='d-flex align-items-center profile-section'>
@@ -34,23 +47,23 @@ const Details = () => {
             <div >
                 <h4 className='text-start py-5 '>Add A Break</h4>
                 <div className='d-flex align-items-center justify-content-center px-2 rounded-3 py-3 button-group' style={{ backgroundColor: '#e0dddd9b' }}>
-                    <button className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>05m</button>
-                    <button className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>10m</button>
-                    <button className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>15m</button>
-                    <button className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>20m</button>
-                    <button className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>25m</button>
+                    <button onClick={() => setBreakTime(5)} className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>05m</button>
+                    <button onClick={() => setBreakTime(10)} className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>10m</button>
+                    <button onClick={() => setBreakTime(15)} className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>15m</button>
+                    <button onClick={() => setBreakTime(20)} className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>20m</button>
+                    <button onClick={() => setBreakTime(25)} className=' rounded-4 m-2 btn btn-outline-secondary fw-semibold'>25m</button>
                 </div>
                 <h4 className='text-start py-5'>Workout Details</h4>
             </div>
 
             <div className='d-flex align-items-center justify-content-between px-4 rounded-3 py-4' style={{ backgroundColor: '#e0dddd9b' }}>
                 <h5 className=''>Workout Time</h5>
-                <h5 className='text-muted'><span className='workout-time'>00.00</span> seconds</h5>
+                <h5 className='text-muted'><span >{time.toFixed(2)}</span> minutes</h5>
             </div>
 
             <div className='d-flex align-items-center justify-content-between px-4 rounded-3 py-4 my-4 mb-5' style={{ backgroundColor: '#e0dddd9b' }}>
                 <h5 className=''>Break Time</h5>
-                <h5 className='text-muted'><span className='workout-time'>00.00</span> seconds</h5>
+                <h5 className='text-muted'><span id='workout-time'>{brkTime}</span> minutes</h5>
             </div>
             <button className='btn btn-success py-4 fs-4 mt-5'>Workout Completed</button>
 
